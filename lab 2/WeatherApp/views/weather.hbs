@@ -1,0 +1,104 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .ms-30{
+            margin-left: 30%;
+        }
+        .ms-40{
+            margin-left: 40%;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body class="bg-warning">
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark mb-3">
+        <div class="container  ">
+            <a class="navbar-brand" href="">WeatherInfo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/weather">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/weather/Zhytomyr">Weather</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<main>
+    <section id="weather">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="list-group">
+                        <a class="list-group-item" href="/weather/Zhytomyr">Zhytomyr</a>
+                        <a class="list-group-item" href="/weather/Kyiv">Kyiv</a>
+                        <a class="list-group-item" href="/weather/Vinnytsia">Vinnytsia</a>
+                        <a class="list-group-item" href="/weather/Odessa">Odessa</a>
+                        <a class="list-group-item" href="/weather/lviv">lviv</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-9 border ">
+                    <div class="row ms-30">
+                        <div class="col-12 col-md-6 col-lg-9 ">
+                            <h1>Weather in {{city}}</h1>
+                        </div>
+                    </div>
+                    <div class="row ms-40">
+                        <div class="col-12 col-md-6 col-lg-9">
+                            <img src="http://openweathermap.org/img/wn/{{weather.weather.0.icon}}@2x.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <th scope="row">Тиск</th>
+                                <td>{{weather.main.pressure}} мм. рт.с.</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">Вологість</th>
+                                <td>{{weather.main.humidity}}%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Температура</th>
+                                <td> {{weather.main.temp}}°C</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-muted">© 2023 Ivan Iglinskyi</span>
+    </div>
+
+
+</footer>
+</body>
+</html>

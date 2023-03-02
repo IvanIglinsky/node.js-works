@@ -3,6 +3,14 @@
   "lastName": "Iglinskyi",
   "languages": [
     {
+      "title": "JS",
+      "level": "Junior"
+    },
+    {
+      "title": "JS",
+      "level": "Junior"
+    },
+    {
       "title": "C#",
       "level": "Junior"
     }
